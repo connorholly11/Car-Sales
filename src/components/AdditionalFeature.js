@@ -11,6 +11,6 @@ const AdditionalFeature = props => {
   );
 };
 
-export default connect(mapStateToProps, 
-  {}
-  )(AdditionalFeature);
+
+
+export default AdditionalFeature

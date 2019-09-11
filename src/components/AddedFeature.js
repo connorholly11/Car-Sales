@@ -11,6 +11,6 @@ const AddedFeature = props => {
   );
 };
 
-export default connect(mapStateToProps, 
-  {}//this object will be the action that you make
-  )(AddedFeature);
+
+
+export default AddedFeature

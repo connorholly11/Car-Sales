@@ -13,6 +13,6 @@ const Header = props => {
   );
 };
 
-export default connect(mapStateToProps, 
-  {}
-  )(Header);
+
+
+export default Header;

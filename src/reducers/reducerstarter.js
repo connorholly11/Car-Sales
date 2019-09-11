@@ -1,3 +1,5 @@
+import {BUY_ITEM} from '../actions'
+
 const initialState = {
     
     additionalPrice: 0,
@@ -19,9 +21,13 @@ const initialState = {
   export const Reducerstarter = (state = initialState, action) => {
       console.log(action)
       switch(action.type){
-
+        case BUY_ITEM:
+          return{
+            ...state,
+            item: action.payload 
+        }
+           
     default: 
         return state;
       }
-      
   }

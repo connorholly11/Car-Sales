@@ -5,10 +5,12 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
+import {connect} from 'react-redux'
 
 
 
-const App = () => {
+
+const App = ({car, store, additionalPrice}) => {
 
   // const state = {
   //   additionalPrice: 0,
@@ -38,15 +40,25 @@ const App = () => {
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={state.car} />
-        <AddedFeatures car={state.car} />
+        <Header car={car}/>
+        <AddedFeatures car={car}/>
       </div>
       <div className="box">
-        <AdditionalFeatures store={state.store} />
-        <Total car={state.car} additionalPrice={state.additionalPrice} />
+        <AdditionalFeatures store={store} />
+        <Total car={car} additionalPrice={additionalPrice} />
       </div>
     </div>
   );
 };
 
-export default App;
+const mapStateToProps = state => {
+  return{
+    car: state.car,
+    store: state.store,
+    additionalPrice: state.additionalPrice
+  }
+}
+
+export default connect(mapStateToProps,
+  {}//remove item action and add item action
+  )(App);

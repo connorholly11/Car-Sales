@@ -20,6 +20,6 @@ const AddedFeatures = props => {
   );
 };
 
-export default connect(mapStateToProps, 
-  {}
-  )(AddedFeatures);
+
+
+export default AddedFeatures

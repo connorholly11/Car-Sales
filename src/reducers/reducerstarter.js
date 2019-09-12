@@ -1,4 +1,5 @@
 import {BUY_ITEM} from '../actions'
+import {REMOVE_ITEM} from '../actions'
 
 const initialState = {
     
@@ -26,6 +27,12 @@ const initialState = {
             ...state,
             item: action.payload 
         }
+        case REMOVE_ITEM:
+            let removeItem =
+            state.features.filter(item => {
+
+            })
+          return removeItem
            
     default: 
         return state;
